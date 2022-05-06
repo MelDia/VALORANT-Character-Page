@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VALORANT</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@300;400&family=Oswald:wght@700&family=Poppins:wght@200;300;400&display=swap');
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        :root {
+            --first-color: #27344d;
+            --second-color: #0e0e19;
+            --red-color: #f25042;
+            --white-color: #fffffe;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            font-family: 'Bebas Neue', cursive;
+            color: var(--white-color);
+            background-color: var(--second-color);
+            background-image: url(img/bg2.png);
+            background-repeat: repeat;
+        }
+
+        .container {
+            width: 100%;
+            display: grid;
+            grid: "character-img-container description-container character-list-container"
+                1fr / 1.5fr 0.5fr 1fr;
+            gap: 8px;
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+
+        /********************IMAGE********************/
+        .character-img-container {
+            grid-area: character-img-container;
+        }
+
+        .character-img {
+            z-index: 1;
+            max-width: 100%;
+            width: 450px;
+            height: auto;
+            position: relative;
+            float: left;
+            margin: 15px;
+            transition: all 0.5s 0s ease;
+            -webkit-transition: margin 0.5s ease-out;
+
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        .character-img:hover {
+            margin-top: 2px;
+        }
+
+        /********************DESCRIPTION********************/
+        .description-container {
+            grid-area: description-container;
+        }
+
+        .section {
+            height: 40hv;
+            width: 30%;
+            z-index: 1;
+            left: 30rem;
+            top: 15rem;
+            display: flex;
+            overflow: hidden;
+            position: absolute;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+
+        .rol-type {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .rol-type h4 {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: 400;
+            font-size: 60px;
+            margin: 0;
+        }
+
+        .rol-type img {
+            width: 40px;
+            margin: 0 0 10px 5px;
+        }
+
+        .biography {
+            width: 350px;
+            margin: 5px 0 0 20px;
+        }
+
+        .biography h3 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+        }
+
+
+        /********************LIST********************/
+        .character-list-container {
+            grid-area: character-list-container;
+            overflow-y: scroll;
+            height: 550px;
+            width: 400px;
+            flex-direction: column;
+        }
+
+        .character-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .character {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            ;
+            align-items: center;
+            align-content: stretch;
+            margin: 0;
+            padding: 0;
+            height: 100px;
+        }
+
+        .character-name {
+            margin: 0;
+            transition: all 0.5s 0s ease;
+        }
+
+        .character-name:hover {
+            margin-left: 20px;
+        }
+
+        .character .number {
+            margin-bottom: 0;
+            margin-top: 50px;
+            margin-right: 10px;
+        }
+
+        .character .number small {
+            font-size: 30px;
+        }
+
+        .character-name a {
+            text-decoration: none;
+        }
+
+        .character-name h3 {
+            font-size: 96px;
+            color: var(--white-color);
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!----------------IMAGE----------------->
+        <div class="character-img-container">
+            <img src="img/KILLJOY.png" class="character-img">
+        </div>
+        <!----------------DESCRIPTION----------------->
+        <div class="description-container">
+            <div class="section">
+                <div class="rol-type">
+                    <h4>// SENTINEL</h4>
+                    <img src="img/logo-sentinel.png" class="logo-rol">
+                </div>
+                <div class="biography">
+                    <h3>The genius of Germany. Killjoy secures the battlefield with ease using her arsenal of
+                        inventions. If the damage from her gear doesn't stop her enemies, her robots' debuff will help
+                        make short work of them.
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!----------------LIST----------------->
+        <div class="character-list-container">
+            <div class="character-list">
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>01</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="brimstone.html">
+                            <h3> BRIMSTONE </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>02</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="jett.html">
+                            <h3> JETT </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>03</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="pheonix.html">
+                            <h3> PHEONIX </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>04</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="sage.html">
+                            <h3> SAGE </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>05</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="sova.html">
+                            <h3> SOVA </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>06</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="breach.html">
+                            <h3> BREACH </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>07</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="cypher.html">
+                            <h3> CYPHER </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>08</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="omen.html">
+                            <h3> OMEN </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>09</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="raze.html">
+                            <h3> RAZE </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>10</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="viper.html">
+                            <h3> VIPER </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>11</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="reyna.html">
+                            <h3> REYNA </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number" style="color: var(--red-color);">
+                        <small>12</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="killjoy.html">
+                            <h3 style="color: var(--red-color);"> KILLJOY </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>13</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="skye.html">
+                            <h3> SKYE </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>14</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="yoru.html">
+                            <h3> YORU </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>15</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="astra.html">
+                            <h3> ASTRA </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>16</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="kayo.html">
+                            <h3> KAY/O </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>17</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="chamber.html">
+                            <h3> CHAMBER </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>18</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="neon.html">
+                            <h3> NEON </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+                <div class="character">
+                    <div class="number">
+                        <small>19</small>
+                    </div>
+                    <div class="character-name">
+                        <a href="fade.html">
+                            <h3> FADE </h3>
+                        </a>
+                    </div>
+                </div>
+                <!----------------------------------------->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
